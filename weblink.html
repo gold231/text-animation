@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .animation {
+            float: left;
+            color: #30302e;
+        }
+        .set2 {
+            float: left;
+            color: #30302e;
+        }
+        .main {
+            font-size: 32px;
+            margin: 50px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="main">
+        <div style="float: left;color: #c1c1c0;">https://</div>
+        <div>
+            <div class="animation">m</div>
+            <div class="animation">a</div>
+            <div class="animation">k</div>
+            <div class="animation">i</div>
+            <div class="animation">n</div>
+            <div class="animation">g</div>
+            <div class="animation">d</div>
+            <div class="animation">e</div>
+            <div class="animation">a</div>
+            <div class="animation">l</div>
+            <div class="animation">s</div>
+            <div class="animation">h</div>
+            <div class="animation">a</div>
+            <div class="animation">p</div>
+            <div class="animation">p</div>
+            <div class="animation">e</div>
+            <div class="animation">n</div>
+            <div class="animation">h</div>
+            <div class="animation">a</div>
+            <div class="animation">n</div>
+            <div class="animation">k</div>
+        </div>
+        <div>
+            <div class="set2">s</div>
+            <div class="set2">a</div>
+            <div class="set2">l</div>
+            <div class="set2">e</div>
+            <div class="set2">s</div>
+            <div class="set2">s</div>
+            <div class="set2">o</div>
+            <div class="set2">a</div>
+            <div class="set2">r</div>
+            <div class="set2">i</div>
+            <div class="set2">n</div>
+            <div class="set2">g</div>
+            <div class="set2">s</div>
+            <div class="set2">u</div>
+            <div class="set2">s</div>
+            <div class="set2">a</div>
+            <div class="set2">n</div>
+        </div>
+        <div style="float: left;color: #84d942;">.realtor</div>
+    </div>
+    
+    <script>
+        $(".animation").hide();
+        $(".set2").hide();
+        function showelem() {
+            $(".animation").each(function(index){
+                $(this).delay(index*200).show(500);
+            });
+            setTimeout(function(){ hideelem(); }, 10000);
+        }
+        function hideelem() {
+            var i=22;
+            $(".animation").each(function(index){
+                i--;
+                $(".animation:nth-child("+i+")").delay(index*100).hide(500);
+            });
+            setTimeout(function(){ showelem2(); }, 3000);
+        }
+        function showelem2() {
+            $(".set2").each(function(index){
+                $(this).delay(index*200).show(500);
+            });
+            setTimeout(function(){ hideelem2(); }, 10000);
+        }
+        function hideelem2() {
+            var j=18;
+            $(".set2").each(function(index){
+                j--;
+                $(".set2:nth-child("+j+")").delay(index*100).hide(500);
+            });
+            setTimeout(function(){ showelem(); }, 2400);
+        }
+        showelem();
+    </script>
+
+</body>
+</html>
